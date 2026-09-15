@@ -12,4 +12,4 @@ astro weather is currently under development. Expect changes to made widely and 
 - OpenWeatherMap API
 
 ## License
-This project is under the MIT License.
+This project is licensed under the MIT License.
