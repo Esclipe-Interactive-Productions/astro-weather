@@ -4,7 +4,7 @@
     "speed unit": "mph",
     "pressure unit": "inHg",
     "distance unit": "miles",
-    "save searches": False,
-    "nofications": True,
-    "weather alerts": True
+    "save searches": false,
+    "nofications": true,
+    "weather alerts": true
 }
