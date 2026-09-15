@@ -1,1 +1,10 @@
-
+{
+    "theme": "system",
+    "temperature unit": "fahrenheit",
+    "speed unit": "mph",
+    "pressure unit": "inHg",
+    "distance unit": "miles",
+    "save searches": False,
+    "nofications": True,
+    "weather alerts": True
+}
