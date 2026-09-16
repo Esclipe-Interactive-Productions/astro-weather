@@ -13,3 +13,12 @@ astro weather is currently under development. Expect changes to made widely and 
 
 ## License
 This project is licensed under the MIT License.
+
+## API key setup
+
+astro Weather requires a weather API key.
+
+Create a `.env` file in the project root:
+
+```env
+weatherapikey = your_api_key_here
