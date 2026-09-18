@@ -1,8 +1,12 @@
 from dotenv import load_dotenv
+from ui.settings import temperatureunit
 import os
 import requests
 
 load_dotenv()
+
+if temperatureunit == "fahrenheit" or "f":
+    temperatureunit2 = "imperial"
 
 def searchcity(cityname):
     print(cityname)
@@ -12,7 +16,7 @@ def searchcity(cityname):
         params={
             "q": cityname,
             "appid": weatherapikey,
-            "units": "imperial"
+            "units": "temperatureunit2"
         }
     )
     data = response.json()
