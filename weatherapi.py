@@ -21,3 +21,15 @@ def searchcity(cityname):
     )
     data = response.json()
     print(data)
+    weatherdata = {
+        "temperature": data["main"]["temp"],
+        "feels_like": data["main"]["feels_like"],
+        "humidity": data["main"]["humidity"],
+        "pressure": data["main"]["pressure"],
+        "condition": data["weather"][0]["main"],
+        "description": data["weather"][0]["description"],
+        "wind_speed": data["wind"]["speed"],
+        "wind_direction": data["wind"]["deg"],
+        "city": data["name"],
+        "country": data["sys"]["country"]
+    }
