@@ -5,22 +5,24 @@ import requests
 
 load_dotenv()
 
-if temperatureunit == "fahrenheit" or "f":
+if temperatureunit == "fahrenheit" or temperatureunit == "f":
     temperatureunit2 = "imperial"
+elif temperatureunit == "celcius" or temperatureunit == "c":
+    temperatureunit2 = "mertric"
+else:
+    temperatureunit2 = "standard"
 
 def searchcity(cityname):
-    print(cityname)
     weatherapikey = os.getenv("weatherapikey")
     response = requests.get(
     "https://api.openweathermap.org/data/2.5/weather",
         params={
             "q": cityname,
             "appid": weatherapikey,
-            "units": "temperatureunit2"
+            "units": temperatureunit2
         }
     )
     data = response.json()
-    print(data)
     weatherdata = {
         "temperature": data["main"]["temp"],
         "feels_like": data["main"]["feels_like"],
@@ -33,3 +35,5 @@ def searchcity(cityname):
         "city": data["name"],
         "country": data["sys"]["country"]
     }
+    print(weatherdata)
+    return weatherdata
