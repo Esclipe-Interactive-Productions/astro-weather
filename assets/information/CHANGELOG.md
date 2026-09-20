@@ -3,7 +3,7 @@
 ## Version History
 
 ### Version Format
-All versions will now be in this new format. Major, minor, build number, (revision, iteration, patch). This is only for files, not .md files or informational files.
+All versions will now be in this new format. Major, minor, build number, (revision, iteration, patch). This is optional for .md or informational files.
 
 As an example:
 
