@@ -18,7 +18,9 @@ This project is licensed under the MIT License.
 
 astro Weather requires a weather API key.
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root if there is not one already:
 
 ```env
 weatherapikey = your_api_key_here
+```
+Go to https://home.openweathermap.org/api_keys and copy the API key. Replace the your_api_key_here with the one you just got. Now your project will function.
