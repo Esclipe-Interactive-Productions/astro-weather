@@ -12,7 +12,7 @@ weatherdata = None
 
 def weatherdescription():
     print(weatherdata["temperature"])
-    descriptionlabel = l(app, text=(weatherdata["temperature"]) + str("°F"), font=("Times", 14))
+    descriptionlabel = l(app, text=str(weatherdata["temperature"]) + ("°F"), font=("Times", 14))
     descriptionlabel.place(x=320, y=70)
     return weatherdata
 
@@ -30,6 +30,9 @@ app.resizable(False, False)
 
 maintitle = l(app, text="astro weather", font=("Times", 15))
 maintitle.place(x=10, y=5)
+versiontitle = l(app, text="ver. 0.5.48", font=("Times", 12))
+# format: major, minor, build number
+versiontitle.place(x=550, y=450)
 searchentry = e(app, width=160, font=("Times", 11), placeholder_text="insert city name")
 searchentry.place(x=100, y=5)
 searchbutton = b(app, text="search", font=("Times", 11), width=55, fg_color="green", hover_color="dark green", command=searchcity)
